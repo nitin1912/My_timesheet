@@ -1,0 +1,37 @@
+<div id="session">
+<% if user_signed_in? && current_user.email == 'admin@admin.com' %>
+
+  <p>Hello <%= current_user.email %></p><br />
+
+<div id="links">
+  <%= link_to 'Logout', destroy_user_session_path, :method => :delete %><br/>
+  <%= link_to 'Change Password', edit_user_registration_path %></div>
+<div id="management">
+<table>
+  <tr>
+    <td><%= link_to 'Check Report', admin_path %>
+    <td><%= link_to 'Clients Management', client_lists_path %></td>
+    <td><%= link_to 'Project Management', projects_path %></td>
+    <td><%= link_to 'Activity Type Management', activities_path %></td>
+    <td><%= link_to 'Employee Mangement', employees_path %></td>
+  <tr>
+</table>
+</div>
+<% elsif user_signed_in? %>
+  <p>Hello <%= current_user.email %></p><br />
+<div id="links">
+  <%= link_to 'Logout', destroy_user_session_path, :method => :delete %><br/>
+  <%= link_to 'Change Password', edit_user_registration_path %></div>
+<div id="management">
+<table>
+  <tr>
+   
+    <td><%= link_to 'Create Timesheet Record', tasksheets_path %></td>
+     <td><%= link_to 'Report', report_path %></td>
+     <td><%= link_to 'Create sheets', sheets_path %></td>
+ <tr>
+</table>
+</div>
+<% end %>
+</div>
+

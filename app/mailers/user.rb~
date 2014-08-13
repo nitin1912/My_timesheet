@@ -1,0 +1,9 @@
+class User< ActionMailer::Base
+  default from: 'Nitin <mail@example.com>'
+
+  def confirmation(user)
+    @user = user
+  
+    mail to: user.email
+  end
+end

@@ -1,0 +1,15 @@
+class UsersController < ApplicationController
+  def create
+    @user = User.new(params[:user])
+    @user.employee.build
+    if @user.save
+      redirect_to employees_path
+    else
+      render action: "new"
+    end
+  end
+
+  def new
+    @user = User.new
+  end
+end

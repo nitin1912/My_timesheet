@@ -1,0 +1,13 @@
+<%= form_for @activity do |f| %>
+<table>
+  <tr class="field">
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+    <td><%= display_error_error_error(:name) %></td>
+  </tr>
+</table>
+
+<div class="action">
+  <%= f.submit  class: 'button' %>
+</div>
+<% end %>

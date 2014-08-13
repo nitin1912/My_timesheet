@@ -1,0 +1,6 @@
+class Timesheet < ActiveRecord::Base
+  attr_accessible :client_list_id, :project_id, :activity_id, :task, :date, :in_time, :out_time, :remarks
+  belongs_to :client_list
+  belongs_to :project
+  belongs_to :activity 
+  end

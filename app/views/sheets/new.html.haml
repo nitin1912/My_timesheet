@@ -1,0 +1,72 @@
+%h1 Create Sheet Record
+= form_tag({:action => 'create', :controller => 'sheets'}, method: :post) do
+  - @@ind = []
+  - key = 0
+  - @@key = 0
+  - @@value = 0
+  - @@array = array_of_row_key
+  = hidden_field_tag  "array_of_row_key", @@array
+  %table#timesheet.class_timesheet
+    ‬
+    %tr.goldy
+      %th= label_tag :client_list_id
+      %th= label_tag :project_id
+      %th= label_tag :activity_id
+      %th= label_tag :task
+      %th= label_tag :date
+      %th= label_tag :in_time
+      %th= label_tag :out_time
+      %th= label_tag :remarks
+    - array_of_row_key.split(',').each  do |t|
+      %tr{id: "selection_#{t}"}
+        %td#fields
+          = select_tag("client_list_id_#{t}", options_for_select(ClientList.client_list.collect {|c| [c.name, c.id]}, :selected => params["client_list_id_#{t}"] ),  |
+            data: {                                                                                                                                                 |
+            remote: true,                                                                                                                                           |
+            url: url_for(action: :for_client, id: "client_list_id_#{t}")}, :prompt => 'select client')                                                        | 
+          %br/
+          - if @task[key].errors.messages[:client_list_id].present?
+            %span= @task[key].errors.messages[:client_list_id][@@value]
+        %td#fields
+          = select_tag("project_id_#{t}", options_for_select(Project.where(:client_list_id=> params["client_list_id_#{t}"]).collect{|p| [p.name, p.id]}, :selected => params["project_id_#{t}"]),  :prompt => 'select project')
+          %br/
+          - if @task[key].errors.messages[:project_id].present?
+            %span= @task[key].errors.messages[:project_id][@@value]
+        %td#fields
+          = select_tag("activity_id_#{t}", options_for_select(Activity.list.collect {|c| [c.name, c.id] },:selected => params["activity_id_#{t}"]), :prompt => 'select activity' )
+          %br/
+          - if @task[key].errors.messages[:activity_id].present?
+            %span= @task[key].errors.messages[:activity_id][@@value]
+        %td#fields
+          = text_field_tag "task_#{t}",params["task_#{t}"], size: 15
+          %br/
+          - if @task[key].errors.messages[:task].present?
+            %span= @task[key].errors.messages[:task][@@value]
+        %td#fields
+          = text_field_tag "date_#{t}", params["date_#{t}"], :class => 'datepicker'
+          %br/
+          - if @task[key].errors.messages[:date].present?
+            %span= @task[key].errors.messages[:date][@@value]
+        %td#fields
+          = time_select("in_time_#{t}", '',  :minute_step => 15 , :default => {hour:  params["in_time_#{t}"]["(4i)"], minute:  params["in_time_#{t}"]["(5i)"]})
+          %br/
+          - if @task[key].errors.messages[:in_time].present?
+            %span= @task[key].errors.messages[:in_time][@@value]
+        %td#fields
+          = time_select "out_time_#{t}", '', :minute_step => 15 ,:default => {hour:  params["out_time_#{t}"]["(4i)"], minute:  params["out_time_#{t}"]["(5i)"]}
+          %br/
+          - if @task[key].errors.messages[:out_time].present?
+            %span= @task[key].errors.messages[:out_time][@@value]
+        %td#fields
+          = text_field_tag "remarks_#{t}",params["remarks_#{t}"], size: 20
+          %br/
+        %td{id: "delete_#{t}"}
+          - unless array_of_row_key.split(',').last == t
+            :javascript
+              $('#delete_#{t}').append("#{j(render :partial => 'form', :locals =>{ :key_of_row => "\#{t}"})}");
+      - @@key = t.to_i
+      - key += 1
+  %br/
+  = submit_tag "Create Sheet", :class => 'button'
+%br/
+= link_to 'Add New Record', new_sheet_path, remote: 'true'

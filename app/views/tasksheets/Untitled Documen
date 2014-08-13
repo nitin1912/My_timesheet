@@ -1,0 +1,12 @@
+<% if @@array.is_a? String %>
+  <% @@array = @@array.split(',').map { |x| x.to_i } %> 
+<% else %>
+  <% @@array = @@array.map { |x| x.to_i } %>
+<% end %>
+
+      <% if @same_date != tasksheet.date %>
+     <tr>
+        <td><%= link_to "Accept for #{tasksheet.date.to_date}"%></td>
+        <td><%= link_to "Reject for #{tasksheet.date.to_date}",tasksheet, confirm: 'Are you Sure', method: :delete %></td>
+      </tr>
+  <% end %>

@@ -1,0 +1,1 @@
+$('#project').append("<%= j(@projects) %>");

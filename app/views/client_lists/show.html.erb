@@ -1,0 +1,31 @@
+<div id="nitin_form">
+<h1>Client's Description</h1>
+<p id="notice"><%= notice %>
+<table>
+  <tr>
+    <th>Name:</th>
+    <td><%= @client_list.name %></td>
+  </tr>
+
+  <tr>
+    <th>Code:</th>
+    <td><%= @client_list.code %></td>
+  </tr>
+  <% @client_list.projects.each do |project| %>
+  <tr>
+    <th>Project:</th>  
+    <td><%= project.name %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+<br/>
+
+
+<%= link_to 'Edit', edit_client_list_path %>
+<% unless @client_list.projects.present? %><%= link_to 'Delete',@client_list_id, confirm: 'Are you sure', method: :delete %>
+<% end %>
+<%= link_to 'Back', client_lists_path %> 
+
+
+

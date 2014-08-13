@@ -1,0 +1,3 @@
+<% if @same_date != tasksheet.date %>
+        <tr><td><%= button_to "submit" %></td></tr>
+      <% end %>

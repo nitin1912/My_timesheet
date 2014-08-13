@@ -1,0 +1,27 @@
+<%= form_for @project do |f| %>
+<table>
+  <tr class="field">
+    <td><%= f.label :client_list_id , "Client" %></td>
+    <td><%= f.select(:client_list_id, options_for_select(ClientList.client_list.collect {|c| [c.name, c.id] }, :selected => @project.client_list_id), :include_blank => 'select client')  %></td>
+    <td><%= display_error(:client_list_id) %></td>
+  <tr>
+
+  <tr class ="field">
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name, size: 20 %></td>
+    <td><%= display_error(:name) %></td>
+  </tr>
+
+  <tr class="field">
+    <td><%= f.label :code %></td>
+    <td><%= f.text_field :code, size: 20 %></td>
+    <td><%= display_error(:code) %></td>
+  <tr>
+</table>
+
+<div class="action">
+  <%= f.submit class: 'button' %>
+</div>
+
+<% end %>
+    

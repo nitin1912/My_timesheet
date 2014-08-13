@@ -1,0 +1,5 @@
+class RegistrationsController < ApplicationController
+  def create
+    @registration = Registration.new(params[:id])
+  end
+end

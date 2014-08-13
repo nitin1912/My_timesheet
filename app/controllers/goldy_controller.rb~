@@ -1,0 +1,6 @@
+class GoldyController < ApplicationController
+  def index
+  end
+
+  
+end

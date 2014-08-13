@@ -1,0 +1,28 @@
+Array.prototype.remByVal = function(val) {
+    for (var i = 0; i < this.length; i++) {
+        if (this[i] === val) {
+            this.splice(i, 1);
+            i--;
+        }
+    }
+    return this;
+}
+
+
+function destroy_corresponding_row(row_key){
+$('#selection_'+ row_key).remove();
+
+
+var arr = $("#array_of_row_key").val();
+var b = arr.split(',');
+alert(b)
+ b.remByVal(row_key);
+alert(row_key)
+alert( b.remByVal(row_key))
+$('#array_of_row_key').val(b.remByVal(row_key));
+@@index.remByVal(row_key);
+
+
+
+}
+

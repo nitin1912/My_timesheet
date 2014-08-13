@@ -1,0 +1,25 @@
+%h1 Create Sheet Record
+= form_tag({:action => 'create', :controller => 'sheets'}, method: :post) do
+  - @@index = [0]
+  - @@key = 0
+  - @@value = 0 
+  = hidden_field_tag  "array_of_row_key" , @@index 
+  %table#timesheet
+    %tr#goldy 
+      %th= label_tag :client_list_id 
+      %th= label_tag :project_id 
+      %th= label_tag :activity_id 
+      %th= label_tag :task 
+      %th= label_tag :date 
+      %th= label_tag :in_time 
+      %th= label_tag :out_time
+      %th= label_tag :remarks
+    = render :partial=> 'field'
+  = submit_tag "Create Sheet", :class => 'button'
+
+<br />
+= link_to 'Add New Record', sheets_path, remote: 'true' 
+
+
+
+

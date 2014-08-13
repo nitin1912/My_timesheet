@@ -1,0 +1,5 @@
+<% if @@array.is_a? String %>
+  <% @@array = @@array.split(',').map { |x| x.to_i } %> 
+<% else %>
+  <% @@array = @@array.map { |x| x.to_i } %>
+<% end %>

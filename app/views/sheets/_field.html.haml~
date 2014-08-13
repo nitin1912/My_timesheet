@@ -1,0 +1,32 @@
+%tr{:id => "selection_#{@@key}"}
+  %td#fields
+    = select_tag("client_list_id_#{@@value}", options_for_select(ClientList.client_list.collect {|c| [c.name, c.id]},:selected => params["client_list_id_#{@@value}"]), data: { remote: true, url: url_for(action: :for_client_list, id: "client_list_id_#{@@value}")}, :prompt => 'select client')
+    
+  %td#fields
+    = select_tag("project_id_#{@@value}", options_for_select(Project.where(:client_list_id=> params["client_list_id_#{@@value}"]).collect{|p| [p.name, p.id]}, :selected => params["project_id_#{@@value}"]),  :prompt => 'select project')
+    
+  %td#fields
+    = select_tag("activity_id_#{@@value}", options_for_select(Activity.list.collect {|c| [c.name, c.id] },:selected => params["activity_id_#{@@value}"]), :prompt => 'select activity') 
+    
+  %td#fields
+    = text_field_tag "task_#{@@value}", params["task_#{@@value}"], size: 15 
+    
+  %td#fields
+    = text_field_tag "date_#{@@value}", params["date_#{@@value}"], :class => 'datepicker' 
+    
+  %td#fields
+    = time_select("in_time_#{@@value}", '',  :minute_step => 15 , :default => {hour: "", minute: ""}) 
+    
+  %td#fields
+    = time_select "out_time_#{@@value}", '', :minute_step => 15 ,:default => {hour: "", minute: ""} 
+   
+  %td#fields
+    = text_field_tag "remarks_#{@@value}", '', size: 20 
+
+  %td{:id=>"delete_#{@@key}"}
+
+
+
+
+
+

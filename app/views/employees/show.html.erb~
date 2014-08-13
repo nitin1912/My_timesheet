@@ -1,0 +1,32 @@
+<div id="nitin_form">
+<h1>Employee Description</h1>
+<p id="notice"><%= notice %>
+<table>
+  <tr>
+    <th>First Name:</th>
+    <td><%= @employee.first_name %></td>
+  </tr>
+
+  <tr>
+    <th>Last Name:</th>
+    <td><%= @employee.last_name %></td>
+  </tr>
+  
+  <tr>
+    <th>Employee Code:</th>
+    <td><%= @employee.employee_code%>
+  </tr>
+
+  <tr>
+    <th>Email Id:</th>
+    <td><%= @employee.user.email %></td>
+  </tr>
+  
+  <tr>
+    <th>Username:</ths>
+    <td><%= @employee.user.username %></td>
+  </tr> 
+</table>
+</div>
+<br/>
+<%= link_to 'Back', employees_path %>

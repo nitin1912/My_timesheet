@@ -1,0 +1,20 @@
+- @@value += 1 
+- @@key += 1 
+
+var arr = new Array();
+arr.push($('#array_of_row_key').val());
+
+arr.push(#{@@key});
+$('#array_of_row_key').val(arr);
+
+$('#timesheet').append("#{ j(render :partial => 'goldy') }");
+
+$('#delete_#{@@key-1}').append("#{ j(render :partial => 'form', :locals =>{ :key_of_row => "#{@@key-1}"})}");
+
+$(function() {
+  $(".datepicker").datepicker({dateFormat: "yy-mm-dd"});
+});
+
+
+
+

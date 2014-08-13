@@ -1,0 +1,8 @@
+%tr.description
+  %td = client_list.name 
+  %td = client_list.code 
+  %td.list_actions 
+    = link_to 'Edit', edit_client_list_path(client_list) 
+    = link_to 'Show', client_list_path(client_list) 
+    - unless client_list.projects.present? 
+      = link_to 'Delete', client_list, confirm: 'Are you Sure?', method: :delete 

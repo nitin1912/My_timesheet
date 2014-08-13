@@ -1,0 +1,15 @@
+= form_for @client_list do |f| 
+  %table
+    %tr.field
+      %td= f.label :name, "Name" 
+      %td= f.text_field :name, size: 20 
+      %td= display_error_error(:name)
+ 
+    %tr.field
+      %td= f.label :code, "Code"
+      %td= f.text_field :code, size: 20      
+      %td= display_error_error(:code) 
+
+  %div.action
+    = f.submit class: 'button' 
+

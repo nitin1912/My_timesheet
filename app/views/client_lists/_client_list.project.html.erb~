@@ -1,0 +1,4 @@
+<tr>
+<th>Project:</th>  
+<td><%= client_list.project.name %></td>
+ </tr>

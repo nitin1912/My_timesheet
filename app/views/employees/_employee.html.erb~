@@ -1,0 +1,13 @@
+<tr class="description">
+  <td><%= employee.first_name %></td>
+  <td><%= employee.last_name %></td>
+  <td><%= employee.employee_code %></td>
+  <td><%= employee.user.email %></td>
+  <td><%= employee.user.username %></td>
+  <td class="list_actions">
+    <%= link_to 'show', employee_path(employee) %>
+    <%= link_to 'Edit', edit_employee_path(employee) %>
+    <%= link_to 'Delete', employee, confirm: 'Are you Sure', method: :delete %>
+  </td>
+</tr>
+

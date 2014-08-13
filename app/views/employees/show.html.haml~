@@ -1,0 +1,25 @@
+#nitin_form
+  %h1 Employee Description 
+  %p#notice= notice 
+  %table
+    %tr
+      %th First Name:
+      %td= @employee.first_name 
+
+    %tr
+      %th Last Name:
+      %td= @employee.last_name 
+  
+    %tr
+      %th Employee Code:
+      %td= @employee.employee_code
+
+    %tr
+      %th Email Id:
+      %td= @employee.user.email 
+      
+    %tr
+      %th Username:
+      %td= @employee.user.username 
+%br/
+= link_to 'Back', employees_path 

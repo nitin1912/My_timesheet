@@ -1,0 +1,9 @@
+module RegistrationsHelper
+  def display_error(field)
+   
+    if.errors[field].any?
+      raw f.errors[field].first+"<br>"
+    end
+    <% end %>
+  end
+end

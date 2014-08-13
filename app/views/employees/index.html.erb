@@ -1,0 +1,17 @@
+<div id="nitin_index">
+<h1>Employees lists</h1>
+
+<table>
+  <tr class="list">
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Employee Code</th>
+    <th>Email Id</th>
+    <th>Username</th>
+    <th>Actions</th>
+  </tr>
+<%= render :partial => @employees %>
+</table>
+</div>
+<br />
+<%= link_to 'New Employee', new_employee_path %>

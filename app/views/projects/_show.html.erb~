@@ -1,0 +1,1 @@
+<%= collection_select(:tasksheet, :project_id, Project.find_all_by_client_list_id(@tasksheet.client_list_id), :id, :name, options ={:prompt => "select project"}) %></td>

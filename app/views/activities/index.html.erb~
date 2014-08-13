@@ -1,0 +1,17 @@
+<div class="nitin_index">
+<h1>Activity Lists</h1>
+
+<table>
+  <tr class="list">
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+<%= render :partial => @activities %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'New Activity', new_activity_path %>
+<br/>
+<%= link_to 'Back', home_index_path %>

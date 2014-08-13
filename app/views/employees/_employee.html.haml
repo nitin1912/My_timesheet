@@ -1,0 +1,10 @@
+%tr.description
+  %td= employee.first_name 
+  %td= employee.last_name 
+  %td= employee.employee_code 
+  %td= employee.user.email
+  %td= employee.user.username 
+  %td.list_actions
+    = link_to 'show', employee_path(employee) 
+    = link_to 'Edit', edit_employee_path(employee) 
+    = link_to 'Delete', employee, confirm: 'Are you Sure', method: :delete 

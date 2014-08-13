@@ -1,0 +1,16 @@
+#nitin_index
+  %h1 Clients List
+  %p#notice= notice 
+  %table
+    %tr.list
+      %th Name 
+      %th Code
+      %th Actions
+    = render :partial => @client_lists , :handler => [:haml]
+%br/
+= link_to 'New Client', new_client_list_path 
+%br/
+= link_to 'Back', home_index_path 
+
+
+

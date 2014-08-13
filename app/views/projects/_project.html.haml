@@ -1,0 +1,9 @@
+%tr.description
+  %td= project.name 
+  %td= project.code 
+  %td= project.client_list.name 
+  %td.list_actions
+    = link_to 'Edit', edit_project_path(project)
+    = link_to 'Delete', project, confirm: 'Are you sure?', method: :delete 
+ 
+

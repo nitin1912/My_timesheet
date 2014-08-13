@@ -1,0 +1,24 @@
+<tr id="selection">
+      <td id ="fields">
+        <%= select_tag("employee_id", options_for_select(Employee.all.collect{|c| [c.first_name, c.id]}, :selected => params["employee_id"]), :prompt => 'select Employee') %><br /> 
+      </td> 
+      <td id="fields">
+        <%= select_tag("client_list_id", options_for_select(ClientList.client_list.collect {|c| [c.name, c.id]}, :selected => params["client_list_id"]), :prompt => 'All Client') %><br />
+      </td>
+
+      <td id="fields">
+        <%= select_tag("project_id", options_for_select(Project.all.collect{|c| [c.name, c.id]}, :selected => params["project_id"]), :prompt => 'All Project') %><br />
+      </td>
+
+      <td id="fields">
+        <%= select_tag("activity_id", options_for_select(Activity.list.collect {|c| [c.name, c.id] },:selected => params["activity_id"]), :prompt => 'All activity') %><br />
+      </td>
+
+  
+      <td id="fields">
+        <%= text_field_tag "from", params["from"], :class => 'datepicker' %><br />
+      </td>
+      <td id="fields">
+        <%= text_field_tag "to", params["to"], :class => 'datepicker' %><br />
+      </td>
+    </tr>

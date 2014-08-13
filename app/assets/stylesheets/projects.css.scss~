@@ -1,0 +1,72 @@
+#nitin_index {
+  h1 {
+    width: 100%;
+    border-bottom: 3px solid #800000;	
+    text-align: center;
+    color: #800000;
+    font-style:sans;
+  }
+  .list {
+    th {
+      border-bottom:3px solid #800000;
+      text-align: left;
+      font-size: 20px;
+      background-color: #800000 ;
+      text-color: #228B22;
+    }
+  } 
+  .description {
+    td {
+      text-align: left;
+      border-bottom: 1px dotted #800000;
+      border-right: 1px dotted #800000;
+    }
+  }
+  .list_actions {
+    padding: 5px;
+    margin: 2px;
+  }
+  table {
+    width: 100%;
+    border: 3px solid #800000	;
+  }
+}
+#notice {
+  color: red;
+ }
+h1 {
+  width: 100%;
+  border-bottom: 3px solid #800000	;
+  text-align: center;
+  color: #800000;
+  padding: 5px;
+  font-style: sans-sarif;
+  font-weight: bold;
+}
+
+.field {
+  td {
+    label {
+      color: #800000;
+      font-size: 25px;
+      font-weight: normal;
+      font-align: center;
+      padding :20px;
+      margin-right: 20px;
+      padding-left: 450px;
+    }
+  }
+  td {
+    color: red;
+    text_size: 20px;
+  }
+}
+.action {
+  padding-top : 30px;
+  text-align: left;
+  padding-left: 450px;
+}
+.button {
+  background-color: green;
+}
+

@@ -1,0 +1,40 @@
+<%= form_for @employee do |f|%>
+<table>
+  <tr class="fields">
+    <td><%= f.label :first_name %></td>
+    <td><%= f.text_field :first_name %></td>
+    <td class="error"><%= display_error_messages(:first_name)%></td>
+  </tr>
+
+  <tr class="fields">
+    <td><%= f.label :last_name, "Last Name" %></td>
+    <td><%= f.text_field :last_name %></td>
+    <td class="error"><%= display_error_messages(:last_name)%></td>
+  </tr>
+
+  <tr class="fields">
+    <td><%= f.label :employee_code, "Employee Code" %></td>
+    <td><%= f.text_field :employee_code  %></td>
+    <td class="error"><%= display_error_messages(:employee_code)%></td>
+  </tr>
+
+  <%= f.fields_for :user do |p| %>
+    <tr class= "fields">
+      <td><%= p.label :email %></td>
+      <td><%= p.email_field :email, :readonly => f.object.persisted? %></td>
+      <td class="error"><%= error_messages(:email) %></td>  
+    </tr>
+  
+    <tr class ="fields">
+      <td><%= p.label :username %></td>
+      <td><%= p.text_field :username %></td>
+      <td class="error"><%= error_messages(:username) %></td>
+    </tr>
+  <% end %>
+</table> 
+  <div>
+    <%= f.submit class: 'button' %>
+  </div>
+<% end %>
+
+

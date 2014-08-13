@@ -1,0 +1,10 @@
+<tr class="description">
+  <td><%= project.name %></td>
+  <td><%= project.code %></td>
+  <td><%= project.client_list.name %></td>
+  <td class="list_actions">
+    <%= link_to 'Edit', edit_project_path(project) %>
+    <%= link_to 'Delete', project, confirm: 'Are you sure?', method: :delete %>
+  </td>
+</tr>
+

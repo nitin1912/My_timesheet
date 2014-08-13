@@ -1,0 +1,26 @@
+<h2>Login</h2>
+<table>
+<%= form_for(resource, as: resource_name, url: login_path(resource_name)) do |f| %>
+  <tr>
+    <td><%= f.label :login %> <br />
+        <%= f.text_field :login %></td>
+   
+  </tr>
+      
+  <tr>
+    <td><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></td>
+  </tr>
+</table>
+<% if devise_mapping.rememberable? %>
+  <tr>
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %></tr>
+<% end %>
+
+<br />
+<div><%= f.submit "Login" %></div>
+<br />
+<% end %>
+<br/>
+<%= render "devise/shared/links" %>

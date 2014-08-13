@@ -1,0 +1,10 @@
+class TimesheetController < ApplicationController
+  def index
+   
+   #s @timesheets = Timesheet.all
+  end
+  def new
+
+    @timesheet = Timesheet.new
+  end
+end

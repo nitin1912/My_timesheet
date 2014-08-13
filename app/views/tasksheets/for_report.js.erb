@@ -1,0 +1,1 @@
+$('#project_id').html("<%=j select_tag("project_id", options_for_select(Project.where(:client_list_id=> params["#{params["id"]}"]).collect{|p| [p.name, p.id]}),  :prompt => 'select project') %>");

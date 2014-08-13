@@ -1,0 +1,4 @@
+<%= link_to 'Delete', "#",  :onclick=>  "destroy_corresponding_row('#{key_of_row}')" %>
+
+
+   

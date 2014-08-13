@@ -1,0 +1,19 @@
+<div id="nitin_index">
+<h1>Project Lists</h1>
+<table>
+  <tr class="list">
+    <th>Name</th>
+    <th>Code</th>
+    <th>Client's Name</th>
+    <th>Actions</th>
+  </tr>
+<%= render :partial => @projects %>
+   
+</table>
+</div>
+
+<br/>
+
+<%= link_to 'New Project', new_project_path %>
+<br/>
+<%= link_to 'Back', home_index_path %>
