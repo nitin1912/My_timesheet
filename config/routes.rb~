@@ -17,16 +17,17 @@ Timesheet::Application.routes.draw do
     resources :activities
     resources :client_lists
     resources :projects 
-  post "/report" => "tasksheets#report"
-  post "/report_submit" => "tasksheets#report_submit"
-  get "/for_client_list" => "tasksheets#for_client_list"
-  get "/for_client" => "sheets#for_client_list"
-  get "/report" => "tasksheets#report"
-  get "/for_report" => "tasksheets#for_report"
-   get "/admin" => "tasksheets#admin"
-   post "/admin" => "tasksheets#admin"
-   post "/admin_report_submit" => "tasksheets#admin_report_submit"
   
+    post "/report" => "tasksheets#report"
+    post "/report_submit" => "tasksheets#report_submit"
+    get "/for_client_list" => "tasksheets#for_client_list"
+    get "/for_client" => "sheets#for_client"
+    get "/report" => "tasksheets#report"
+    get "/for_report" => "tasksheets#for_report"
+    get "/admin" => "tasksheets#admin"
+    post "/admin" => "tasksheets#admin"
+    post "/admin_report_submit" => "tasksheets#admin_report_submit"
+    get "/send_mail/:id" => "employees#send_mail", as: "send_email"
    # match '/projects/new', to: 'projects#new', via: :get
   # The priority is based upon order of creation:
   # first created -> highest priority.

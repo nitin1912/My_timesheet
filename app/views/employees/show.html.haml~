@@ -3,6 +3,10 @@
   %p#notice= notice 
   %table
     %tr
+      %th Photo: 
+      %td= image_tag @employee.photo.url(:small)
+     
+    %tr  
       %th First Name:
       %td= @employee.first_name 
 

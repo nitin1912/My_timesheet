@@ -1,0 +1,8 @@
+<% wb = xlsx_package.workbook %>
+<% wb.add_worksheet(name: "Tasksheet") do |sheet| %>
+  <% sheet.add_row ["Client", "Project", "Activity", "Task", "Date", "In Time", "Out time", "Remarks"] %>## Header values of Excel
+   
+   <% @timesheet.each do |t| %>
+     <% sheet.add_row [t.client_list.name, t.project.name, t.activity.name, t.task, t.date, t.in_time, t.out_time, t.remarks] %>
+  <% end %>
+<% end %>

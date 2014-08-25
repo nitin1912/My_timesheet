@@ -1,0 +1,8 @@
+@employees.each do |employee|
+pdf.text image_tag employee.photo.url(:thumb) 
+pdf.text employee.first_name 
+pdf.text employee.last_name 
+pdf.text "#{employee.employee_code}" 
+pdf.text employee.user.email 
+pdf.text employee.user.username
+end

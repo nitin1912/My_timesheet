@@ -1,9 +1,13 @@
 class EmployeesController < ApplicationController
  before_filter :authorize
+ require 'open-uri'
   def index
+  #debugger
    @employees = Employee.all
-   render action: 'index', :handlers => [:haml]
+   
+  render action: 'index', :handlers => [:haml]
   end
+  
 
   def new
     @employee = Employee.new
@@ -13,8 +17,14 @@ class EmployeesController < ApplicationController
   end
   
   def show
+  #debugger
     @employee = Employee.find(params[:id])
-    render action: 'show', :handlers => [:haml]
+    respond_to do |format|
+    format.html # show.html
+   format.pdf { render :layout => false } 
+   #debugger
+    #render action: 'show', :handlers => [:haml]
+  end
   end
 
   def create
@@ -47,7 +57,16 @@ class EmployeesController < ApplicationController
 
   def destroy
     @employee = Employee.find(params[:id])
+    debugger
     @employee.destroy
     redirect_to employees_path, notice: "Employee successfully deleted"
   end
+  
+  def send_mail
+  #debugger
+    @employee = Employee.find(params[:id])
+     Notifier.welcome(@employee).deliver
+     redirect_to employees_path, :notice=> 'Mail successfully delivered'
+    #debugger
+  end 
 end

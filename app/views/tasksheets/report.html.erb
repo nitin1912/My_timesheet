@@ -95,6 +95,13 @@
   <%= hidden_field_tag  "hidden_value_array", @hidden_value_array  %>  
   <td>
    <%= submit_tag 'Submit all', :name => 'submit_all'%>
+   <%= submit_tag "Download as Excel", :name => 'download' %>
+   
+
+<p id="pdf_link"><%= link_to "Download Invoice (PDF)", report_path(:format => "pdf") %></p>
+
+
+
   </td>
 <% end %>
 

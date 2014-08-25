@@ -18,6 +18,12 @@ class ClientListsController < ApplicationController
   
   def show
     @client_list = ClientList.find(params[:id])
+    respond_to do |format|
+    format.html # show.html.erb
+    format.pdf { render :layout => false }  
+
+    #render action: 'show', :handlers => [:haml]
+  end
   end
   
   def create

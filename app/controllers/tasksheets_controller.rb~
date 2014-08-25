@@ -126,14 +126,20 @@ class TasksheetsController < ApplicationController
     end     
   end
   def report
+ # debugger
     if params["client_list_id"].present? && params["project_id"].present? && params["activity_id"].present?
       if params["status"] == "new"
+      #  debugger
         @flag = Tasksheet.where(:flag => '0')
         @user = @flag.where(:employee_id => current_user.employee_id)
         @client = @user.where(:client_list_id => params["client_list_id"])
         @project = @client.where(:project_id => params["project_id"])
         @activity = @project.where(:activity_id => params["activity_id"])
         @timesheet = @activity.where(:date => (params[:from].to_date)..(params[:to].to_date))
+       
+         # format.xlsx #{render xlsx: @timesheet}
+         # debugger
+        
       
       elsif params["status"] == "submitted"
         @flag = Tasksheet.where(:flag => '1')
@@ -170,6 +176,45 @@ class TasksheetsController < ApplicationController
   end
   
   def report_submit
+  debugger
+  if params["pdf"]
+      @timesheet = []
+      params["hidden_value_array"].split().each do |t|
+       @tasksheet = Tasksheet.new
+        @tasksheet.client_list_id = params["client_list_id_#{t}"]
+        @tasksheet.project_id = params["project_id_#{t}"]
+        @tasksheet.activity_id = params["activity_id_#{t}"]
+        @tasksheet.task = params["task_#{t}"]
+        @tasksheet.date = params["date_#{t}"]
+        @tasksheet.in_time = params["in_time_#{t}"]
+        @tasksheet.out_time = params["out_time_#{t}"]
+        @tasksheet.remarks = params["remarks_#{t}"]
+        @timesheet << @tasksheet
+      end
+      render 'report_submit',  formats: :pdf
+    end
+    if params["download"]
+      @timesheet = []
+      params["hidden_value_array"].split().each do |t|
+       @tasksheet = Tasksheet.new
+        @tasksheet.client_list_id = params["client_list_id_#{t}"]
+        @tasksheet.project_id = params["project_id_#{t}"]
+        @tasksheet.activity_id = params["activity_id_#{t}"]
+        @tasksheet.task = params["task_#{t}"]
+        @tasksheet.date = params["date_#{t}"]
+        @tasksheet.in_time = params["in_time_#{t}"]
+        @tasksheet.out_time = params["out_time_#{t}"]
+        @tasksheet.remarks = params["remarks_#{t}"]
+        @timesheet << @tasksheet
+      end
+      render 'report_submit', :handlers => [:axlsx], formats: :xlsx
+      
+
+      #debugger
+      
+      
+    end
+      
     if params["submit"]
       @tasksheets = []
       @tasksheet_not_saved = []

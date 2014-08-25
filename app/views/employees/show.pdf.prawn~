@@ -1,0 +1,8 @@
+- debugger
+pdf.image "#{Rails.root.to_s+'/public/system/employees/photos/000/000/003/thumb/logo.png'}" 
+pdf.text  "First Name: #{@employee.first_name}" 
+pdf.text  "Last Name:  #{@employee.last_name}" 
+pdf.text  "Employee Code: #{@employee.employee_code}" 
+pdf.text  "Email: #{@employee.user.email}" 
+pdf.text  "Username: #{@employee.user.username}"
+

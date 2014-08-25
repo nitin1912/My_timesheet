@@ -5,7 +5,7 @@ class Tasksheet < ActiveRecord::Base
   belongs_to :activity 
   belongs_to :employee
   belongs_to :user
-  
+   acts_as_xlsx
   validates :client_list_id, :project_id, :activity_id, :task, :date, presence: true
   #validates_uniqueness_of :in_time 
   validate :time

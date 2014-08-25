@@ -2,6 +2,10 @@
 <h1>Employee Description</h1>
 <p id="notice"><%= notice %>
 <table>
+   <tr>
+     <th>Photo:</th> 
+     <td><%= image_tag @employee.photo.url(:thumb) %></td>
+  </tr>   
   <tr>
     <th>First Name:</th>
     <td><%= @employee.first_name %></td>
@@ -30,3 +34,4 @@
 </div>
 <br/>
 <%= link_to 'Back', employees_path %>
+<%= link_to 'open pdf', employee_path(:format => 'pdf')%>

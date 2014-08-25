@@ -1,6 +1,6 @@
 <div id ="timesheet_report">
 <h1>Report</h1>
-<%= form_tag(:controller => 'tasksheets', :action => 'report', method: :post) do  %> 
+<%= form_tag({:controller => 'tasksheets', :action => 'report'}, method: :post) do  %> 
   <table id="report">
     <tr class="goldy">
       <th><%= label_tag :status %>
@@ -95,6 +95,13 @@
   <%= hidden_field_tag  "hidden_value_array", @hidden_value_array  %>  
   <td>
    <%= submit_tag 'Submit all', :name => 'submit_all'%>
+   <%= submit_tag "Download as Excel", :name => 'download' %>
+   
+
+<p id="pdf_link"><%= link_to "Download Invoice (PDF)", report_path(:format => "pdf") %></p>
+
+
+
   </td>
 <% end %>
 

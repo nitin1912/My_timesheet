@@ -14,11 +14,30 @@
  *= require_jquery.ui.timepicker
  * require jquery-ui
  * require jquery_ujs
-  *= require bootstrap-timepicker
+ *= require bootstrap-timepicker
 * require jquery.timepicker.css
  * require bootstrap-datetimepicker
  */
+@media print {
+  body {
+    background-color: #FFF;
+  }
 
+  #container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  #line_items {
+    page-break-before: always;
+  }
+  
+  #pdf_link {
+    display: none;
+  }
+}
 /* Datepicker
 ----------------------------------*/
 .ui-datepicker {

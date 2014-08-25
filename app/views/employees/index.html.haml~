@@ -8,6 +8,6 @@
       %th Email Id
       %th Username
       %th Actions
-    = render :partial => @employees
+    = render :partial => @employees, :handlers => [:haml]
 %br/
 = link_to 'New Employee', new_employee_path 
