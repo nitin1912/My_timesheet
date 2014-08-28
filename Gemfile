@@ -65,7 +65,9 @@ gem 'daemon-spawn', '0.4.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
+group :doc do
+  gem 'sdoc', '0.3.20', require: false
+end
 # Deploy with Capistrano
 # gem 'capistrano'
 
