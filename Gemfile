@@ -37,7 +37,8 @@ gem 'jquery-timepicker-rails'
 #image upload
  gem 'paperclip', '~> 3.0'
 #image magick 
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem "rmagick", "2.12.0", :require => 'RMagick'
+#gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 #excel converter
 gem 'acts_as_xlsx'
 gem 'axlsx_rails'

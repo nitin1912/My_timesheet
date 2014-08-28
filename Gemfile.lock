@@ -5,12 +5,6 @@ GIT
     bootstrap-timepicker-rails (0.1.3)
       railties (>= 3.0)
 
-GIT
-  remote: http://github.com/rmagick/rmagick.git
-  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
-  specs:
-    rmagick (2.13.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,6 +164,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rmagick (2.12.0)
     ruby-rc4 (0.1.5)
     rubyzip (1.0.0)
     sass (3.4.1)
@@ -233,7 +228,7 @@ DEPENDENCIES
   prawnto_2
   rails (= 3.2.14)
   rails_12factor (= 0.0.2)
-  rmagick (= 2.13.2)!
+  rmagick (= 2.12.0)
   sass-rails (~> 3.2.3)
   sdoc (= 0.3.20)
   simple_form
