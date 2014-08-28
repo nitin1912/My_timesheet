@@ -9,15 +9,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
 
  *= require_self
- *= require_tree 
  *= require_jquery.ui.datepicker
- *= require_jquery.ui.timepicker
- * require jquery-ui
- * require jquery_ujs
- *= require bootstrap-timepicker
-* require jquery.timepicker.css
- * require bootstrap-datetimepicker
+ *= require_tree .
  */
+
+  div#session{
+    float: left;
+    width: 120px;
+    }
+    div#nitin_index{
+    float: right;
+    
+    width: 90%
+    }
+    
+/*.......................*/
 @media print {
   body {
     background-color: #FFF;

@@ -6,11 +6,12 @@
       %th Name 
       %th Code
       %th Actions
-    = render :partial => @client_lists , :handler => [:haml]
-%br/
-= link_to 'New Client', new_client_list_path 
-%br/
-= link_to 'Back', home_index_path 
+    = render :partial => @client_lists , :handlers => [:haml]
+  %br/
+  %div#management
+    %ul
+      %li.active= link_to 'New Client', new_client_list_path 
+      %li.active= link_to 'Back', home_index_path 
 
 
 

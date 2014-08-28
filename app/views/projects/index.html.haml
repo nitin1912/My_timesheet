@@ -7,7 +7,8 @@
       %th Client's Name
       %th Actions
     = render :partial => @projects, :handlers => [:haml]
-%br/
-= link_to 'New Project', new_project_path 
-%br/
-= link_to 'Back', home_index_path 
+  %br/
+  %div#management
+    %ul
+      %li.active= link_to 'New Project', new_project_path 
+      %li.active= link_to 'Back', home_index_path 

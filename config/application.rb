@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-
+#require './lib/employee_job.rb' 
 require 'rails/all'
 #require 'pdfkit'
 
@@ -16,7 +16,7 @@ module Timesheet
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-
+ #config.autoload_paths += Dir["#{config.root}/lib/**/"]
     #config.middleware.use PDFKit::Middleware
 
 

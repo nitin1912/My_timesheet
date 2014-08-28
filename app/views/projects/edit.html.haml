@@ -1,5 +1,9 @@
 %h1 Project Add/Edit
 = render 'field', :handlers => [:haml] 
-= link_to 'Back', projects_path 
+%div#management
+  %ul
+    %li.active= link_to 'Back', projects_path 
+
+
 
 

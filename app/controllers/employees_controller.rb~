@@ -57,15 +57,49 @@ class EmployeesController < ApplicationController
 
   def destroy
     @employee = Employee.find(params[:id])
-    debugger
+   # debugger
     @employee.destroy
-    redirect_to employees_path, notice: "Employee successfully deleted"
+    respond_to do |format|
+    format.html{redirect_to employees_path, notice: "Employee successfully deleted"}
+    format.js{render :layout=> false }
+  end
+  def send_all
+    @user = []
+    @employee = Employee.find(:all)
+    @employee.each do |t|
+      @user << t.user.email
+    end
+  end
+  
+  def send_mail_all
+    @user = params["to"].split(' ')
+    @subject = params["subject"]
+    @message = params["message"]
+    mail = {}
+    mail = {user: params["to"], subject: @subject, message: @message}
+    Notifier.delay.welcome_all(mail)
+
+    #Delayed::Job.enqueue EmployeeJob.new(params[:id])
+
+    redirect_to employees_path, :notice=> 'Mail successfully delivered'
+  end
+   #handle_asynchronously :send_mail_all
+  
+  def create_mail
+    @employee = Employee.find(params[:id])
+    
   end
   
   def send_mail
-  #debugger
-    @employee = Employee.find(params[:id])
-     Notifier.welcome(@employee).deliver
+    @employee = []
+    employee = Employee.find(params[:id])
+    @employee << employee.user.email
+    message = params["message"]
+    @employee << message
+    subject = params["subject"]
+    @employee << subject
+    #debugger
+     Notifier.delay.welcome(@employee)
      redirect_to employees_path, :notice=> 'Mail successfully delivered'
     #debugger
   end 

@@ -11,7 +11,7 @@
       border-bottom: 1px dotted #800000;
       border-right: 1px dotted #800000;
     }
-    width: 100%;
+    width: 80%;
     border: 3px solid #800000	;
  
     tr {
@@ -28,39 +28,40 @@
 #timesheet_report{
   h1 {
     width: 100%;
-    border-bottom: 3px solid #800000;	
     text-align: center;
-    color: #800000;
+    color: #556B2F;
     font-style:sans;
   }
   .goldy {
     th {
       text-align: left;
       font-size: 20px;
-      text-color: #228B22;
+      text-color: #556B2F;
+      border-bottom: 1px dotted #800000;
+      border-right: 1px dotted #800000;
     }
   }
   #list {
     th {
-      border-bottom:3px solid #800000;
+      border-bottom: 3px solid #556B2F;
       text-align: left;
       font-size: 20px;
-     
-      text-color: #228B22;
+      border-bottom: 1px dotted #800000;
+      border-right: 1px dotted #800000;
+      text-color: #556B2F;
     }
   } 
   #description {
     td {
       text-align: left;
-      border-bottom: 1px dotted #800000;
-      border-right: 1px dotted #800000;
+      border-bottom: 1px dotted #556B2F;
+      border-right: 1px dotted #556B2F;
     }
   } 
 
   #report {
-    
-      width: 100%;
-      border: 3px solid #800000	;
+    width: 90%;
+   // border: 3px solid #556B2F;
    
   } 
   .find {
@@ -70,13 +71,15 @@
   #selection {
     #field {
       td {
-      color: #800000;
+      color: #556B2F;
       font-size: 25px;
       font-weight: normal;
       font-align: center;
       padding :20px;
       margin-right: 20px;
       padding-left: 450px;
+      border-bottom: 1px dotted #800000;
+      border-right: 1px dotted #800000;
       }
 
   }

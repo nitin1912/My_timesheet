@@ -1,3 +1,3 @@
 %h1 Project Add/Edit
-= render 'form', :handlers => [:haml]
+= render 'field', :handlers => [:haml]
 = link_to 'Back', projects_path 

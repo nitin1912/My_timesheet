@@ -34,4 +34,4 @@
 </div>
 <br/>
 <%= link_to 'Back', employees_path %>
-<%= link_to 'open pdf', employee_path(:format => pdf)%>
+<%= link_to 'open pdf', employee_path(:format => 'pdf')%>

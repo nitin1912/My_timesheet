@@ -33,5 +33,9 @@
 </table>
 </div>
 <br/>
-<%= link_to 'Back', employees_path %>
-<%= link_to 'open pdf', employee_path(:format => 'pdf')%>
+<div id="management">
+  <ul>
+  <li class = "active"><%= link_to 'Back', employees_path %></li>
+  <li class = "active"><%= link_to 'open pdf', employee_path(:format => 'pdf')%></li>
+  </ul>
+  </div>

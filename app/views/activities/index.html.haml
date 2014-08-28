@@ -1,4 +1,4 @@
-.nitin_index
+#nitin_index
   %h1 Activity Lists
   %table
     %tr.list
@@ -6,7 +6,8 @@
       %th Actions
     = render :partial => @activities , :handlers => [:haml]
 
-%br/
-= link_to 'New Activity', new_activity_path 
-%br/
-= link_to 'Back', home_index_path
+  %br/
+  %div#management
+    %ul  
+      %li.active= link_to 'New Activity', new_activity_path 
+      %li.active= link_to 'Back', home_index_path

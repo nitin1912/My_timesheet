@@ -10,5 +10,8 @@
       %th Username
       %th Actions
     = render :partial => @employees, :handlers => [:haml]
-%br/
-= link_to 'New Employee', new_employee_path 
+  %br/
+  %div#management
+    %ul
+      %li.active= link_to 'New Employee', new_employee_path 
+      %li.active= link_to 'Send mail to all user', send_all_path

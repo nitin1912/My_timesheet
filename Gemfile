@@ -47,7 +47,10 @@ gem 'axlsx', '~> 2.0'
 #gem 'wkhtmltopdf-binary'
 gem 'prawn', '0.12.0'
 gem "prawnto_2", :require => "prawnto"
-
+#gem "delayed_job",  :git => 'git://github.com/collectiveidea/delayed_job.git'
+#gem 'delayed_job_active_record'
+gem 'delayed_job_active_record', '0.4.3'
+gem 'daemon-spawn', '0.4.2'
 #gem "combined_time_select", "~> 1.0.1"
 
 

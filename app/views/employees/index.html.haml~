@@ -2,6 +2,7 @@
   %h1 Employees lists
   %table
     %tr.list
+      %th Photo
       %th First Name
       %th Last Name
       %th Employee Code
@@ -10,4 +11,7 @@
       %th Actions
     = render :partial => @employees, :handlers => [:haml]
 %br/
-= link_to 'New Employee', new_employee_path 
+%div#management
+  %ul
+    %li.active= link_to 'New Employee', new_employee_path 
+    %li.active= link_to 'Send mail to all user', send_all_path

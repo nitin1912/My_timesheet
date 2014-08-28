@@ -1,25 +1,25 @@
 #nitin_index {
   h1 {
     width: 100%;
-    border-bottom: 3px solid #800000;	
     text-align: center;
-    color: #800000;
+    color: #556B2F;
+    margin-top: 10px;
     font-style:sans;
   }
   .list {
     th {
-      border-bottom:3px solid #800000;
+      border-bottom:3px solid #556B2F;
       text-align: left;
       font-size: 20px;
-      background-color: #800000 ;
+      background-color: #586835;
       text-color: #228B22;
     }
   } 
   .description {
     td {
       text-align: left;
-      border-bottom: 1px dotted #800000;
-      border-right: 1px dotted #800000;
+      border-bottom: 1px dotted  #556B2F;
+      border-right: 1px dotted  #556B2F;
     }
   }
   .list_actions {
@@ -27,20 +27,21 @@
     margin: 2px;
   }
   table {
-    width: 100%;
-    border: 3px solid #800000	;
+    width: 150%;
+    border: 3px solid  	#556B2F	;
   }
-}
+
 #notice {
     color: red;
 }
 
 h1 {
   width: 100%;
-  border-bottom: 3px solid #800000	;
+  //border-bottom: 3px solid #800000	;
   text-align: center;
   color: #800000;
   padding: 5px;
+  margin-top: 10px;
   font-style: sans-sarif;
   font-weight: bold;
 }
@@ -48,7 +49,7 @@ h1 {
 .field {
   td {
     label {
-      color: #800000;
+      color:  #556B2F;
       font-size: 25px;
       font-weight: normal;
       font-align: center;
@@ -59,9 +60,7 @@ h1 {
   }
   td {
     color: red;
-
-
-  }
+}
 }
 .action {
   padding-top : 30px;
@@ -69,16 +68,70 @@ h1 {
   padding-left: 450px;
 }
 .button {
-  background-color: green;
+  background-color:  #556B2F;
   }
-#nitin_form {
-  table {
-    width: 50%;
-    border: 3px solid #800000	;
-    text-align: left;
-  }
+}
+#management,
+#management ul,
+#management li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-family: Helvetica;
+  line-height: 1;
+}
+#management {
+  width: auto;
+  //padding-left: 130px;
+  //padding-bottom: 100px;
+}
+#management ul {
+  zoom: 1;
+  background: #a7bc7a url(images/pattern.png) top left repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #839b4e;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+#management ul:before {
+  content: '';
+  display: block;
+}
+#management ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#management a,
+#management a:link,
+#management a:visited {
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px #586835;
+  border-right: 1px solid #839b4e;
+}
+#management a:hover {
+  color: #556B2F;
+  text-shadow: 0 1px 1px #bdcd9c;
+}
+#management li {
+  float: left;
+  border-right: 1px solid #b2c58b;
+}
+#management li:hover {
+  background: #9cb369 url(images/pattern.png) top left repeat;
+}
+#management li:first-child {
+  border-left: none;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
 }
 
-body {
-  background: #DEB887;
-}

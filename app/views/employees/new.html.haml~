@@ -1,4 +1,4 @@
 %h1 New Employee 
-= render 'form' , :handlers => [:haml]
+= render 'field' , :handlers => [:haml]
 = link_to 'Back', employees_path 
 

@@ -1,0 +1,19 @@
+<h1>Create Mail</h1>
+<%= form_tag({:controller => 'employees', :action => 'send_mail_all'}) %>
+<table>
+  <tr>
+    <th><%= label_tag :to %></th>
+    <td><%= text_field_tag "to", @employee.user.email , size: 50 %></td>
+  </tr>
+  <br/
+  <tr>
+    <th><%= label_tag :subject %></th>
+    <td><%= text_field_tag "subject", '', :size=> 50 %></td>
+  </tr>
+  <br/>
+  <tr>
+    <th><%= label_tag :message %></th>
+    <td><%= text_area_tag "message", '', :size=> '100*200'%></td>
+  </tr>
+</table>
+<%= submit_tag "Send Mail" %>

@@ -9,4 +9,4 @@
     = link_to 'show', employee_path(employee) 
     = link_to 'Edit', edit_employee_path(employee) 
     = link_to 'Delete', employee, confirm: 'Are you Sure', method: :delete
-    = link_to 'Send mail', send_mail_path(employee)
+    = link_to 'Send mail', create_mail_path(employee)

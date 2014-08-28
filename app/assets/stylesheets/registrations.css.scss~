@@ -17,6 +17,7 @@ label {
     
 .error {
   color: red;
+  text-size: 10px;
 }
 .session {
   text-align: right;

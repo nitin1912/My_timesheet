@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 <html>
 <head>
   <title>Timesheet</title>
@@ -10,10 +9,13 @@
 </head>
 
 <body class="<%= controller.controller_name %>">
-
-  <div id="secondaryContent">
-    <%= render 'common/session' %>
-  </div>
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+ 
+      <div id="secondaryContent">
+        <%= render 'common/session' %>
+      </div>
+        <%= yield %>
+      
+   
 </body>
 </html>

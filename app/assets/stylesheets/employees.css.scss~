@@ -1,25 +1,26 @@
 #nitin_index {
   h1 {
     width: 100%;
-    border-bottom: 3px solid #800000;	
+    //border-bottom: 3px solid #800000;	
     text-align: center;
-    color: #800000;
+    color: #556B2F;
+    margin-top: 10px;
     font-style:sans;
   }
   .list {
     th {
-      border-bottom:3px solid #800000;
+      border-bottom:3px solid  #556B2F;
       text-align: left;
       font-size: 20px;
-      background-color: #800000 ;
+      background-color:  #556B2F ;
       text-color: #228B22;
     }
   } 
   .description {
     td {
       text-align: left;
-      border-bottom: 1px dotted #800000;
-      border-right: 1px dotted #800000;
+      border-bottom: 1px dotted #556B2F;
+      border-right: 1px dotted  #556B2F;
     }
   }
   .list_actions {
@@ -28,18 +29,19 @@
   }
   table {
     width: 100%;
-    border: 3px solid #800000	;
+    border: 3px solid  #556B2F	;
   }
 }
 #notice {
-    color: red;
+    color: green;
 }
 h1 {
   width: 100%;
-  border-bottom: 3px solid #800000	;
+ // border-bottom: 3px solid #800000	;
   text-align: center;
-  color: #800000;
+  color: #556B2F;
   padding: 5px;
+  margin-top: 10px;
   font-style: sans-sarif;
   font-weight: bold;
 }
@@ -47,7 +49,7 @@ h1 {
 .field {
   td {
     label {
-      color: #800000;
+      color: #556B2F;
       font-size: 25px;
       font-weight: normal;
       font-align: center;
