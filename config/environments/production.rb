@@ -57,8 +57,8 @@ Timesheet::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'demo-timesheet.herokuapp.com',
-    user_name:            'app.send.emails@gmail.com',
-    password:             'Pass@123',
+    user_name:            'nitin.chauhan@qualtech-consultants.com',
+    password:             'NGObarka!@#456',
     authentication:       'plain',
     enable_starttls_auto: true  }
      config.action_mailer.default_url_options = {host: 'demo-timesheet.herokuapp.com'}
