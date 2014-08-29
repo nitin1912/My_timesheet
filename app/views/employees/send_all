@@ -16,4 +16,4 @@
     <td><%= text_area_tag "message", '', :size=> '100*200'%></td>
   </tr>
 </table>
-<%= submit_tag "Send Mail" %>
+<%= submit_tag "Send Mail TO All" %>

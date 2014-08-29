@@ -100,7 +100,7 @@ class EmployeesController < ApplicationController
     subject = params["subject"]
     @employee << subject
     #debugger
-     Notifier.delay.welcome(@employee)
+     Notifier.welcome(@employee).deliver
      redirect_to employees_path, :notice=> 'Mail successfully delivered'
     #debugger
   end 

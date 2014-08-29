@@ -60,8 +60,9 @@ class EmployeesController < ApplicationController
    # debugger
     @employee.destroy
     respond_to do |format|
-    format.html{redirect_to employees_path, notice: "Employee successfully deleted"}
-    format.js{render :layout=> false }
+      format.html{redirect_to employees_path, notice: "Employee successfully deleted"}
+      format.js{render :layout=> false }
+    end
   end
   def send_all
     @user = []

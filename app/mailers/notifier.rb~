@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
 
   def welcome(recipient)
     @employee = recipient
-    attachments["rails.png"] = File.read("#{Rails.root}/app/assets/images/rails.png") 
+    #attachments["rails.png"] = File.read("#{Rails.root}/app/assets/images/rails.png") 
     mail(to: @employee[0], subject: @employee[2], body: @employee[1])
   
   end

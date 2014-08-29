@@ -1,5 +1,5 @@
 <h1>Create Mail</h1>
-<%= form_tag({:controller => 'employees', :action => 'send_mail_all'}) %>
+<%= form_tag({:controller => 'employees', :action => 'send_mail'}) %>
 <table>
   <tr>
     <th><%= label_tag :to %></th>
