@@ -4,7 +4,7 @@ Timesheet::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
-  config.action_mailer.default_url_options = {host: 'localhost:3000'}
+  config.action_mailer.default_url_options = {host: 'serene-plateau-2931.herokuapp.com'}
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
@@ -59,7 +59,7 @@ Timesheet::Application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
-
+  I18n.enforce_available_locales = false 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
