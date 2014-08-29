@@ -1,4 +1,4 @@
-class AddAttachmentsPhotoToEmployee < ActiveRecord::Migration
+class AddAttachmentsPhotoToEmployees < ActiveRecord::Migration
   def change
     add_column :employees, :photo_file_name, :string
     add_column :employees, :photo_content_type, :string
