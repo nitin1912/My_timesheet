@@ -56,7 +56,7 @@ Timesheet::Application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'gmail.com',
+    domain:               'demo-timesheet.herokuapp.com',
     user_name:            'goldychauhan1912@gmail.com',
     password:             'ngobaraut',
     authentication:       'plain',
