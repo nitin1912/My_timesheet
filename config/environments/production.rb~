@@ -57,7 +57,7 @@ Timesheet::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'demo-timesheet.herokuapp.com',
-    user_name:            'goldychauhan1912.com',
+    user_name:            'goldychauhan1912@gmail.com',
     password:             'ngobaraut',
     authentication:       'plain',
     enable_starttls_auto: true  }
