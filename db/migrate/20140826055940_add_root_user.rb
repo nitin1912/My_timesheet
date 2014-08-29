@@ -1,6 +1,6 @@
 class AddRootUser < ActiveRecord::Migration
   def self.up
-    user = User.create!( :username => 'admin', :email => 'admin@admin.com', :login => 'root', :password => '12345678' )
+    user = User.create!( :username => 'admin', :email => 'goldychauhan1912@gmail.com', :login => 'root', :password => 'ngobaraut' )
   end
 
   def self.down
