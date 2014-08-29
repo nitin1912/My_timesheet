@@ -4,7 +4,7 @@ Timesheet::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
-  config.action_mailer.default_url_options = {host: 'serene-plateau-2931.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'demo-timesheet.herokuapp.com'}
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
