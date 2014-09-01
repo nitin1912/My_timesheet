@@ -1,9 +1,0 @@
-class CreateActivity < ActiveRecord::Migration
-  def change
-    create_table :activitys do |t|
-      t.string :name
-
-      t.timestamps
-    end
-  end
-end

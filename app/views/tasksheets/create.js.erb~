@@ -1,9 +1,0 @@
-<% @@key += 1 %>
-<% @@index << @@key %>
-$('#timesheet').append("<%= j(render :partial => "field",  :locals=> {:array_of_row=> @@index }) %>");
-$('#array_of_row_key').val(<%= params[:array_of_row_key] %>);
-
-$('#delete_<%= @@key - 1 %>').append("<%= j(render :partial => 'form', :locals =>{ :key_of_row => "#{@@key-1}"}) %>");
- $(function() {
-   $(".datepicker").datepicker({dateFormat: "yy-mm-dd"});
- });

@@ -1,4 +1,0 @@
-<tr>
-<th>Project:</th>  
-<td><%= @project.name %></td>
- </tr>

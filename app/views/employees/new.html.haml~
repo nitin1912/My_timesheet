@@ -1,4 +1,0 @@
-%h1 New Employee 
-= render 'field' , :handlers => [:haml]
-= link_to 'Back', employees_path 
-

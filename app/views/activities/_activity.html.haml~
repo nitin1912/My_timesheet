@@ -1,6 +1,0 @@
-%tr.description
-  %td= activity.name
-  %td.list_actions 
-    = link_to 'Edit', edit_activity_path(activity) 
-    = link_to 'Delete',activity, confirm: 'Are you Sure?', method: :delete 
-

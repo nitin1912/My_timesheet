@@ -1,8 +1,0 @@
-$.ajax({
-  url: "/tasksheets/new
-  dataType: 'JSON',
-  success: function(data) {
-    var listing = JSON.parse(data);
-    $("#page").html(data.city);
-  }
-});

@@ -1,2 +1,0 @@
-<%= url_for(host: "localhost:3000", controller: "employees", action: "send_email") %>
-
