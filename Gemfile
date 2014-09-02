@@ -67,12 +67,19 @@ gem 'daemon-spawn', '0.4.2'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
-# To use debugger
- gem 'debugger'
- group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
 end
 
+# To use debugger
+# gem 'debugger'
+
+#enable commit for heroku
+#  gem 'pg'
+
+# required only rails version 4 onwards
+# gem 'rails_12factor'
