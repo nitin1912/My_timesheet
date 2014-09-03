@@ -1,5 +1,7 @@
 class EmployeesController < ApplicationController
  before_filter :authorize
+  #load_and_authorize_resource
+  #check_authorization
  require 'open-uri'
   def index
   #debugger

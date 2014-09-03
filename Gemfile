@@ -33,11 +33,12 @@ gem 'bootstrap-timepicker-rails', :require => 'bootstrap-timepicker-rails',
 
 gem 'validates_timeliness', '~> 3.0'
 gem 'jquery-timepicker-rails'
- gem "haml-rails"
+gem "haml-rails"
 #image upload
- gem 'paperclip', '~> 3.0'
+gem 'paperclip', '~> 3.0'
 #image magick 
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem "rmagick", "2.12.0", :require => 'RMagick'
+#gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 #excel converter
 gem 'acts_as_xlsx'
 gem 'axlsx_rails'
@@ -51,8 +52,8 @@ gem "prawnto_2", :require => "prawnto"
 #gem 'delayed_job_active_record'
 gem 'delayed_job_active_record', '0.4.3'
 gem 'daemon-spawn', '0.4.2'
-#gem "combined_time_select", "~> 1.0.1"
-
+##authoriztion
+gem "cancan"
 
 #gem 'calendar_date_select', :git => 'git://github.com/paneq/calendar_date_select.git'
 # SORRY! But the 'datetimepicker-rails' name in RubyGems repo already taken.

@@ -1,5 +1,7 @@
 class SheetsController < ApplicationController
  before_filter :authenticate_user!
+  #before_filter :authorize
+ #check_authorization
   def index
    @sheet = Sheet.new 
   end

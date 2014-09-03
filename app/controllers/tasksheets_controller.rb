@@ -1,5 +1,8 @@
 class TasksheetsController < ApplicationController
- before_filter :authenticate_user!
+  before_filter :authenticate_user!
+  #check_authorization
+  load_and_authorize_resource :only => [:admin]
+  
   def index
     @tasksheet = Tasksheet.new 
   end
@@ -413,6 +416,7 @@ class TasksheetsController < ApplicationController
   end
   
   def admin
+  #debugger
     @tasksheets = []
     if params["employee_id"].present? && params["client_list_id"].blank? && params["project_id"].blank? && params["activity_id"].blank?
       @flag = Tasksheet.where(:flag => 1)

@@ -1,13 +1,17 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :authorize
-
+   #load_and_authorize_resource
+  #check_authorization
   def index
+    #debugger
     @projects = Project.all
+   
     render action: 'index', :handlers => [:haml]
    end
   
   def create
+   
     @project = Project.new(params[:project])
     if @project.save
       redirect_to projects_path, notice: "Project successfully created"

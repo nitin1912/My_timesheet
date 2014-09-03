@@ -1,5 +1,7 @@
 class ActivitiesController < ApplicationController
    before_filter :authorize
+    #load_and_authorize_resource
+  #check_authorization
   before_filter :authenticate_user!
   def index
     @activities = Activity.all

@@ -1,7 +1,10 @@
 class ClientListsController < ApplicationController
   before_filter :authenticate_user!
+   #load_and_authorize_resource
+#check_authorization
   before_filter :authorize
   def index
+    #debugger
     @client_lists = ClientList.all
     render action: 'index', :handlers => [:haml]
   end
