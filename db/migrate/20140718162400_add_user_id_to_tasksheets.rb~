@@ -1,5 +1,0 @@
-class AddUserIdToTasksheets < ActiveRecord::Migration
-  def change
-    add_column :tasksheets, :user_id, :integer
-  end
-end

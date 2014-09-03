@@ -1,7 +1,0 @@
-module SessionsHelper
-  def devise_failure_messages(field)
-    if resource.errors[field].any?
-      messages =  resource.errors[field].first
-    end
-  end
-end

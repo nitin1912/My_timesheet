@@ -1,8 +1,0 @@
-<h1>Activity Type Add/Edit </h1>
-
-<%= render 'form' %>
-<div id="management">
-  <ul>  
-    <li class = "active"><%= link_to 'Back', activities_path %></li>
-  </ul>
-</div>

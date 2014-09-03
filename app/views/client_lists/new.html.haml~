@@ -1,7 +1,0 @@
-#nitin_index
-  %h1 Client Add/Edit
-  = render 'field', :handlers => [:haml]
-  %div#management
-    %ul
-      %li.active= link_to 'Back', client_lists_path 
-

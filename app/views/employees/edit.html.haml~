@@ -1,7 +1,0 @@
-%h1 Editing Employees
-= render 'field', :handlers => [:haml] 
-%div#management
-  %ul
-    %li.active= link_to 'Back', employees_path 
-
-= link_to 'Back', employees_path 

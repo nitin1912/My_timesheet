@@ -37,8 +37,7 @@ gem 'jquery-timepicker-rails'
 #image upload
  gem 'paperclip', '~> 3.0'
 #image magick 
-gem "rmagick", "2.12.0", :require => 'RMagick'
-#gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 #excel converter
 gem 'acts_as_xlsx'
 gem 'axlsx_rails'
@@ -66,16 +65,13 @@ gem 'daemon-spawn', '0.4.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-group :doc do
-  gem 'sdoc', '0.3.20', require: false
-end
-# Deploy with Capistrano
-# gem 'capistrano'
 
-# To use debugger
-#gem 'debugger'
- group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+# Deploy with Capistrano
+gem 'capistrano'
+
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
 end
 

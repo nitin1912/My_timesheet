@@ -1,1 +1,0 @@
-$("#tasksheet_project").html('&lt;%= options_for_select(@projects.map {|sc| [sc.name, sc.id]}).gsub(/n/, '') %&gt;');

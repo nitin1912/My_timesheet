@@ -5,6 +5,12 @@ GIT
     bootstrap-timepicker-rails (0.1.3)
       railties (>= 3.0)
 
+GIT
+  remote: http://github.com/rmagick/rmagick.git
+  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
+  specs:
+    rmagick (2.13.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +57,19 @@ GEM
       rails (>= 3.1)
     bcrypt (3.1.7)
     builder (3.0.4)
+    capistrano (3.2.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.2)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -61,7 +80,8 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
+    coffee-script-source (1.7.1)
+    colorize (0.7.3)
     daemon-spawn (0.4.2)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
@@ -104,6 +124,9 @@ GEM
     mini_portile (0.6.0)
     multi_json (1.10.1)
     mysql2 (0.3.16)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -118,7 +141,6 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    pg (0.15.1)
     polyglot (0.3.5)
     prawn (0.12.0)
       pdf-reader (>= 0.9.0)
@@ -141,11 +163,6 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
-    rails_12factor (0.0.2)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.2)
-    rails_stdout_logging (0.0.3)
     railties (3.2.14)
       actionpack (= 3.2.14)
       activesupport (= 3.2.14)
@@ -157,7 +174,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
-    rmagick (2.12.0)
     ruby-rc4 (0.1.5)
     rubyzip (1.0.0)
     sass (3.4.1)
@@ -165,9 +181,6 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    sdoc (0.3.20)
-      json (>= 1.1.3)
-      rdoc (~> 3.10)
     simple_form (2.1.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -176,6 +189,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sshkit (1.5.1)
+      colorize
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -204,6 +221,10 @@ DEPENDENCIES
   axlsx (~> 2.0)
   axlsx_rails
   bootstrap-timepicker-rails!
+  capistrano
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
   coffee-rails (~> 3.2.1)
   daemon-spawn (= 0.4.2)
   delayed_job_active_record (= 0.4.3)
@@ -215,14 +236,11 @@ DEPENDENCIES
   jquery_datepicker
   mysql2
   paperclip (~> 3.0)
-  pg (= 0.15.1)
   prawn (= 0.12.0)
   prawnto_2
   rails (= 3.2.14)
-  rails_12factor (= 0.0.2)
-  rmagick (= 2.12.0)
+  rmagick (= 2.13.2)!
   sass-rails (~> 3.2.3)
-  sdoc (= 0.3.20)
   simple_form
   therubyracer
   uglifier (>= 1.0.3)

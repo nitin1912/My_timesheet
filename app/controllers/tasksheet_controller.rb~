@@ -1,8 +1,0 @@
-class TasksheetController < ApplicationController
-  def index
-   #@tasksheets = Tasksheet.all
-  end
-  def new
-    @tasksheet = Tasksheet.new(params[:id])
-  end
-end

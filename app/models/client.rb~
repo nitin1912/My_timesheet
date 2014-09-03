@@ -1,4 +1,0 @@
-class ClientList < ActiveRecord::Base
-  attr_accessible :name, :code
-end
-

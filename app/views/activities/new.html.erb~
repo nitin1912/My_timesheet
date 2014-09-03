@@ -1,5 +1,0 @@
-<h1>Activity Type Add/Edit</h1>
-
-<%= render 'form'%>
-
-<%= link_to 'Back', activities_path %>

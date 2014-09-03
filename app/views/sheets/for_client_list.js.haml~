@@ -1,8 +1,0 @@
-:plain
-  $('#project_id_#{@index}').html("#{j select_tag("project_id_#{@index}", options_for_select(Project.where(:client_list_id=> params["#{params["id"]}"]).collect{|p| [p.name, p.id]}, :selected => params["project_id_#{@index}"]),  :prompt => 'select project')} ");
-  
-  
-  
-  
-  
-
