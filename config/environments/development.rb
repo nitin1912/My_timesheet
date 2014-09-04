@@ -11,12 +11,13 @@ Timesheet::Application.configure do
 
   # set delivery method to :smtp, :sendmail or :test
   config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'app.send.emails@gmail.com',
-    password:             'Pass@123',
+    user_name:            'goldychauhan1912@gmail.com',
+    password:             'ngobaraut',
     authentication:       'plain',
     enable_starttls_auto: true  }
   #######

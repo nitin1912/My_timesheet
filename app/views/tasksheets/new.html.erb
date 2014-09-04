@@ -1,3 +1,4 @@
+<div id ="create_timesheet">
 <h1>Create Timesheet Record</h1>
 <%= form_tag(@tasksheet) do  %>
   <% @@ind = [] %>
@@ -103,6 +104,6 @@
 <% end %>
 <br />
 <%= link_to 'Add New Record', new_tasksheet_path, remote: 'true'%>
-
+</div>
 
 

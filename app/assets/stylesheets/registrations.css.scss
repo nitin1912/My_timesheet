@@ -1,15 +1,13 @@
 h2 {
-
   margin: 20px;
   padding-bottom: 10px;
   margin-left: 0px;
-  color: #800000;
+  color:  #556B2F;
   font-weight: bold;
   font-size: 30px;
-  border-bottom: 1px solid #800000;
+  text-align: center;
 }
 label {
-
   margin: 0px;
   color: green;
   font-weight: bold;
@@ -17,16 +15,28 @@ label {
     
 .error {
   color: red;
-
 }
 .session {
   text-align: right;
 }
 .notice {
-  color: red;
+  color: green;
 }
 .alert {
   color: red;
 }
 
-
+#password_reset {
+  margin: 20px;
+  padding-left: 120px;
+  width: 50%;
+  h3 {
+  margin: 20px;
+  padding-bottom: 10px;
+  margin-left: 0px;
+  color:  #556B2F;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  
+}}
